@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Youtube from "react-youtube";
 import movieTrailer from "movie-trailer";
-import axios from "../../../axios";
-import "./Row.scss";
+import axios from "./axios";
+import "./Row.css";
 
 const base_url = "https://image.tmdb.org/t/p/original/";
 
@@ -39,6 +39,8 @@ function Row({ title, fetchUrl, isLargeRow }) {
         .catch((error) => console.log(error));
     }
   };
+
+  console.log(movies);
 
   return (
     <div className="row">
